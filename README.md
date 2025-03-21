@@ -11,7 +11,7 @@ Pembuatan Aplikasi To-Do List dengan Flutter
     Variabel plan digunakan untuk menyimpan dan mengelola daftar tugas dalam aplikasi. Variabel dibuat sebagai konstanta untuk memastikan bahwa objek Plan bersifat immutable (tidak dapat diubah setelah dibuat) sehingga meminimalisir kemungkinan terjadinya perubahan data yang tidak diinginkan.
 
 * ### Capture Hasil Langkah 9 dan Penjelasan
-    ![Capture Praktikum 1](images/latihan1)
+    ![Capture Praktikum 1](images/latihan1.gif)
     Penjelasan: Langkah 9 menghasilkan tampilan aplikasi dengan daftar tugas yang dapat diedit. Setiap tugas terdiri dari:
     * Checkbox: Untuk menandai apakah tugas sudah selesai atau belum.
     * TextField: Untuk mengedit deskripsi tugas.
