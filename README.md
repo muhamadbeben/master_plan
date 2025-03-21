@@ -1,16 +1,31 @@
-# master_plan
+# Laporan Praktikum
 
-A new Flutter project.
+Pembuatan Aplikasi To-Do List dengan Flutter
 
-## Getting Started
+## Praktikum 1
 
-This project is a starting point for a Flutter application.
+* ### Maksud dari Langkah 4 dan Alasan Dilakukannya
+    Langkah 4 bertujuan untuk membuat file data_layer.dart yang mengemas ekspor dari kedua model (plan.dart dan task.dart). Dengan cara ini, proses impor menjadi lebih sederhana karena kita cukup mengimpor data_layer.dart tanpa perlu mengimpor plan.dart dan task.dart
 
-A few resources to get you started if this is your first Flutter project:
+* ### Mengapa Perlu Variabel plan di Langkah 6
+    Variabel plan digunakan untuk menyimpan dan mengelola daftar tugas dalam aplikasi. Variabel dibuat sebagai konstanta untuk memastikan bahwa objek Plan bersifat immutable (tidak dapat diubah setelah dibuat) sehingga meminimalisir kemungkinan terjadinya perubahan data yang tidak diinginkan.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* ### Capture Hasil Langkah 9 dan Penjelasan
+    ![Capture Praktikum 1](images/latihan1)
+    Penjelasan: Langkah 9 menghasilkan tampilan aplikasi dengan daftar tugas yang dapat diedit. Setiap tugas terdiri dari:
+    * Checkbox: Untuk menandai apakah tugas sudah selesai atau belum.
+    * TextField: Untuk mengedit deskripsi tugas.
+    * ListView: Menampilkan daftar tugas secara dinamis.
+    
+    Ketika tombol tambah ditekan, tugas baru akan ditambahkan ke daftar. Saat pengguna mencentang checkbox atau mengedit teks, perubahan langsung diperbarui dalam daftar.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* ### Kegunaan Method pada Langkah 11 dan 13 dalam Lifecycle State
+    Langkah 11 (initState())
+    * Method initState() dipanggil saat widget pertama kali dibuat.
+    * Di dalamnya, kita membuat ScrollController dan menambahkan listener untuk menghapus fokus dari semua TextField saat pengguna melakukan scroll.
+    * Hal ini berguna terutama di iOS, di mana keyboard dapat menutupi bagian bawah layar.
+    
+    Langkah 13 (dispose())
+    * Method dispose() dipanggil saat widget dihapus dari widget tree.
+    * Digunakan untuk membebaskan resource yang tidak lagi digunakan, dalam hal ini ScrollController.
+    * Ini penting untuk menghindari memory leak atau masalah performa dalam aplikasi.
